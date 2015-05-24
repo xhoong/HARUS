@@ -1,7 +1,7 @@
 # Global variable stating the file URL where the data is located, the basePath of
 # the unzipped directory and the method to download the data file.
 uciFileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-uciBasePath <- "./UCI HAR Dataset"
+uciBasePath <- "./"
 downloadMethod <- "wget"
 
 # Download the files if local path do not contains the data files to process
