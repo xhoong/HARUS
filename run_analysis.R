@@ -84,9 +84,9 @@ makeTidyDataFile <- function(fname) {
   require(reshape2)
   # Default to error message if file path does not exists, to prevent download from
   # server, if you need to download, uncomment downloadData and comment the stop
-  if(!file.exists(uciBasePath)) {
+  if(!file.exists(file.path(uciBasePath, "activity_labels.txt"))) {
     #  downloadData()
-    stop("Please download UCI dataset from ", uciFileUrl,
+    stop("No data file FOUND: Please download UCI dataset from ", uciFileUrl,
          "\nand extract it to current working folder ", uciBasePath)
   }
   mergedData <- mergeAndTidy()
