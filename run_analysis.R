@@ -100,7 +100,7 @@ makeTidyDataFile <- function(fname) {
   tidyData <- dcast(meltedData, ActivityName + SubjectID ~ variable, mean, na.rm=T)
   # Finally write the tidy data to file.
   write.table(tidyData, fname, row.names=FALSE)
-  message("Done.")
+  message("Done: Tidy data written to file ", fname)
 }
 
 
